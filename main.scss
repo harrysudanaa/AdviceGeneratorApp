@@ -64,12 +64,23 @@ body {
       }
     }
     .btn-get-advice {
+      border: 1px solid $neonGreen;
       border-radius: 50%;
       background-color: $neonGreen;
       padding: 25px;
       display: flex;
       transform: translate(0%, 50%);
     }
+    .btn-get-advice:active {
+      box-shadow: 0px 0px 50px 0px $neonGreen;
+      -webkit-box-shadow: 0px 0px 50px 0px $neonGreen;
+      -moz-box-shadow: 0px 0px 50px 0px $neonGreen;
+    }
+    // .btn-get-advice:hover {
+    //   box-shadow: 0px 0px 10px 0px $neonGreen;
+    //   -webkit-box-shadow: 0px 0px 10px 0px $neonGreen;
+    //   -moz-box-shadow: 0px 0px 10px 0px $neonGreen;
+    // }
   }
 }
 
