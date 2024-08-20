@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: hsl(218, 23%, 16%);
+}
+.container .card-container {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+  border-radius: 10px;
+  background-color: hsl(217, 19%, 24%);
+}
+.container .card-container .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.container .card-container .card .advice-id {
+  color: hsl(150, 100%, 66%);
+  font-weight: 800;
+  margin: 20px 0px;
+  letter-spacing: 4px;
+  font-size: 12px;
+}
+.container .card-container .card .advice {
+  color: hsl(193, 38%, 86%);
+  text-align: center;
+  font-weight: 800;
+  font-size: 28px;
+}
+.container .card-container .card .divider {
+  margin-top: 30px;
+}
+.container .card-container .btn-get-advice {
+  border-radius: 50%;
+  background-color: hsl(150, 100%, 66%);
+  padding: 25px;
+  display: flex;
+  transform: translate(0%, 50%);
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(218, 23%, 16%);
+  }
+  .container .card-container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 24%);
+  }
+  .container .card-container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .container .card-container .card .advice-id {
+    color: hsl(150, 100%, 66%);
+    font-weight: 800;
+    margin: 20px 0px;
+    letter-spacing: 4px;
+    font-size: 12px;
+  }
+  .container .card-container .card .advice {
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    font-weight: 800;
+    font-size: 28px;
+  }
+  .container .card-container .card .divider {
+    margin-top: 30px;
+  }
+  .container .card-container .btn-get-advice {
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    padding: 25px;
+    display: flex;
+    transform: translate(0%, 50%);
+  }
+}/*# sourceMappingURL=main.css.map */
