@@ -17,7 +17,7 @@ body {
   background-color: hsl(218, 23%, 16%);
 }
 .container .card-container {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +50,6 @@ body {
   margin-top: 30px;
 }
 .container .card-container .btn-get-advice {
-  border: 1px solid hsl(150, 100%, 66%);
   border-radius: 50%;
   background-color: hsl(150, 100%, 66%);
   padding: 25px;
@@ -111,5 +110,25 @@ body {
     padding: 25px;
     display: flex;
     transform: translate(0%, 50%);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: hsl(218, 23%, 16%);
+  }
+  .container .card-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 10px 0px 10px;
+    border-radius: 10px;
+    background-color: hsl(217, 19%, 24%);
   }
 }/*# sourceMappingURL=main.css.map */
