@@ -29,8 +29,10 @@ Users should be able to:
 - Generate a new piece of advice by clicking the dice icon
 
 ### Screenshot
-![image](https://github.com/user-attachments/assets/a136d952-d8af-4fab-8ba1-222d92803744)
-![image](https://github.com/user-attachments/assets/f8a2e9da-4d6f-49f9-b5fd-a36c79708dca)
+![image](https://github.com/user-attachments/assets/ca40d854-1941-46c7-8028-c08f420940f2)
+
+![image](https://github.com/user-attachments/assets/a250addd-0fc4-4884-ab71-123e14a4959d)
+
 
 ### Links
 
