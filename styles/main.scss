@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
 
-$mobileScreen: 375px;
-$desktopScreen: 1440px;
 $lightCyan: hsl(193, 38%, 86%);
 $neonGreen: hsl(150, 100%, 66%);
+$darkGreen: hsl(150, 100%, 33%);
 $grayishBlue: hsl(217, 19%, 38%);
 $darkGrayishBlue: hsl(217, 19%, 24%);
 $darkBlue: hsl(218, 23%, 16%);
@@ -18,6 +17,10 @@ $fontWeight: 800;
 
 body {
   font-family: "Manrope", sans-serif;
+}
+
+.hidden {
+  display: none;
 }
 
 .container {
@@ -62,6 +65,28 @@ body {
       .divider {
         margin-top: 30px;
       }
+      .loader {
+        width: 50px;
+        aspect-ratio: 1;
+        display: grid;
+
+        &::before,
+        &::after {
+          content: "";
+          grid-area: 1/1;
+          --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+          background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+            var(--c) 0 50%;
+          background-size: 12px 12px;
+          animation: l12 1s infinite;
+        }
+        &::before {
+          margin: 4px;
+          filter: hue-rotate(45deg);
+          background-size: 8px 8px;
+          animation-timing-function: linear;
+        }
+      }
     }
     .btn-get-advice {
       border-radius: 50%;
@@ -74,6 +99,11 @@ body {
         box-shadow: 0px 0px 50px 0px $neonGreen;
         -webkit-box-shadow: 0px 0px 50px 0px $neonGreen;
         -moz-box-shadow: 0px 0px 50px 0px $neonGreen;
+      }
+
+      &:hover {
+        // transform: scale(1.1) translate(0%, 50%);
+        background-color: $darkGreen;
       }
     }
   }
@@ -122,6 +152,29 @@ body {
         .divider {
           margin-top: 30px;
         }
+
+        .loader {
+          width: 50px;
+          aspect-ratio: 1;
+          display: grid;
+
+          &::before,
+          &::after {
+            content: "";
+            grid-area: 1/1;
+            --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+            background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+              var(--c) 0 50%;
+            background-size: 12px 12px;
+            animation: l12 1s infinite;
+          }
+          &::before {
+            margin: 4px;
+            filter: hue-rotate(45deg);
+            background-size: 8px 8px;
+            animation-timing-function: linear;
+          }
+        }
       }
       .btn-get-advice {
         border-radius: 50%;
@@ -129,6 +182,17 @@ body {
         padding: 25px;
         display: flex;
         transform: translate(0%, 50%);
+
+        &:active {
+          box-shadow: 0px 0px 50px 0px $neonGreen;
+          -webkit-box-shadow: 0px 0px 50px 0px $neonGreen;
+          -moz-box-shadow: 0px 0px 50px 0px $neonGreen;
+        }
+
+        &:hover {
+          // transform: scale(1.1) translate(0%, 50%);
+          background-color: $darkGreen;
+        }
       }
     }
   }
@@ -152,6 +216,78 @@ body {
       margin: 0px 10px 0px 10px;
       border-radius: 10px;
       background-color: $darkGrayishBlue;
+
+      .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 20px;
+
+        .advice-id {
+          color: $neonGreen;
+          font-weight: $fontWeight;
+          margin: 20px 0px;
+          letter-spacing: 4px;
+          font-size: 12px;
+        }
+
+        .advice {
+          color: $lightCyan;
+          text-align: center;
+          font-weight: $fontWeight;
+          font-size: $quoteFontSize;
+        }
+        .divider {
+          margin-top: 30px;
+        }
+        .loader {
+          width: 50px;
+          aspect-ratio: 1;
+          display: none;
+
+          &::before,
+          &::after {
+            content: "";
+            grid-area: 1/1;
+            --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+            background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+              var(--c) 0 50%;
+            background-size: 12px 12px;
+            animation: l12 1s infinite;
+          }
+          &::before {
+            margin: 4px;
+            filter: hue-rotate(45deg);
+            background-size: 8px 8px;
+            animation-timing-function: linear;
+          }
+        }
+      }
+      .btn-get-advice {
+        border-radius: 50%;
+        background-color: $neonGreen;
+        padding: 25px;
+        display: flex;
+        transform: translate(0%, 50%);
+
+        &:active {
+          box-shadow: 0px 0px 50px 0px $neonGreen;
+          -webkit-box-shadow: 0px 0px 50px 0px $neonGreen;
+          -moz-box-shadow: 0px 0px 50px 0px $neonGreen;
+        }
+
+        &:hover {
+          // transform: scale(1.1) translate(0%, 50%);
+          background-color: $darkGreen;
+        }
+      }
     }
+  }
+}
+
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
   }
 }

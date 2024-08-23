@@ -8,6 +8,10 @@ body {
   font-family: "Manrope", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -49,6 +53,25 @@ body {
 .container .card-container .card .divider {
   margin-top: 30px;
 }
+.container .card-container .card .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+}
+.container .card-container .card .loader::before, .container .card-container .card .loader::after {
+  content: "";
+  grid-area: 1/1;
+  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+  background-size: 12px 12px;
+  animation: l12 1s infinite;
+}
+.container .card-container .card .loader::before {
+  margin: 4px;
+  filter: hue-rotate(45deg);
+  background-size: 8px 8px;
+  animation-timing-function: linear;
+}
 .container .card-container .btn-get-advice {
   border-radius: 50%;
   background-color: hsl(150, 100%, 66%);
@@ -60,6 +83,9 @@ body {
   box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
   -webkit-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
   -moz-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+}
+.container .card-container .btn-get-advice:hover {
+  background-color: hsl(150, 100%, 33%);
 }
 
 @media only screen and (max-width: 480px) {
@@ -104,12 +130,39 @@ body {
   .container .card-container .card .divider {
     margin-top: 30px;
   }
+  .container .card-container .card .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+  }
+  .container .card-container .card .loader::before, .container .card-container .card .loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+  }
+  .container .card-container .card .loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear;
+  }
   .container .card-container .btn-get-advice {
     border-radius: 50%;
     background-color: hsl(150, 100%, 66%);
     padding: 25px;
     display: flex;
     transform: translate(0%, 50%);
+  }
+  .container .card-container .btn-get-advice:active {
+    box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+    -webkit-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+    -moz-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+  }
+  .container .card-container .btn-get-advice:hover {
+    background-color: hsl(150, 100%, 33%);
   }
 }
 @media only screen and (min-width: 1440px) {
@@ -130,5 +183,67 @@ body {
     margin: 0px 10px 0px 10px;
     border-radius: 10px;
     background-color: hsl(217, 19%, 24%);
+  }
+  .container .card-container .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 20px;
+  }
+  .container .card-container .card .advice-id {
+    color: hsl(150, 100%, 66%);
+    font-weight: 800;
+    margin: 20px 0px;
+    letter-spacing: 4px;
+    font-size: 12px;
+  }
+  .container .card-container .card .advice {
+    color: hsl(193, 38%, 86%);
+    text-align: center;
+    font-weight: 800;
+    font-size: 28px;
+  }
+  .container .card-container .card .divider {
+    margin-top: 30px;
+  }
+  .container .card-container .card .loader {
+    width: 50px;
+    aspect-ratio: 1;
+    display: none;
+  }
+  .container .card-container .card .loader::before, .container .card-container .card .loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%, var(--c) 0 50%;
+    background-size: 12px 12px;
+    animation: l12 1s infinite;
+  }
+  .container .card-container .card .loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear;
+  }
+  .container .card-container .btn-get-advice {
+    border-radius: 50%;
+    background-color: hsl(150, 100%, 66%);
+    padding: 25px;
+    display: flex;
+    transform: translate(0%, 50%);
+  }
+  .container .card-container .btn-get-advice:active {
+    box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+    -webkit-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+    -moz-box-shadow: 0px 0px 50px 0px hsl(150, 100%, 66%);
+  }
+  .container .card-container .btn-get-advice:hover {
+    background-color: hsl(150, 100%, 33%);
+  }
+}
+@keyframes l12 {
+  100% {
+    transform: rotate(0.5turn);
   }
 }/*# sourceMappingURL=main.css.map */

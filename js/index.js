@@ -1,9 +1,16 @@
 const adviceIdElement = document.querySelector(".advice-id");
 const adviceElement = document.querySelector(".advice");
 const btnGetAdvice = document.querySelector(".btn-get-advice");
+const loader = document.querySelector(".loader");
+
+function showLoading(isLoading) {
+  loader.style.display = isLoading ? "grid" : "none";
+  adviceElement.classList.toggle("hidden", isLoading);
+}
 
 btnGetAdvice.addEventListener("click", async () => {
   const url = "https://api.adviceslip.com/advice";
+  showLoading(true);
   try {
     const response = await fetch(url, {
       headers: {
@@ -19,6 +26,8 @@ btnGetAdvice.addEventListener("click", async () => {
     console.log(responseData);
   } catch (error) {
     console.error(error);
+  } finally {
+    showLoading(false);
   }
 });
 
